@@ -1,0 +1,4 @@
+hi where (id, fun, never)
+{
+    3+2<5*4+(9/9)%10
+}

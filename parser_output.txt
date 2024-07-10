@@ -1,0 +1,125 @@
+Parsing beginning...
+
+hi where ( id , fun , never ) { 3 + 2 < 5 * 4 +( 9 / 9 )% 10 } PRODUCTION RULE Entire_Program  --> Generate_rec
+PRODUCTION RULE Generate_rec   --> FuncDef Generate_rec | ε
+PRODUCTION RULE FuncDef --> function id ( Arg_list ) BlockStatements
+hi
+where
+(
+PRODUCTION RULE Arg_list --> ε | id Arg_sequence
+id
+PRODUCTION RULE Arg_sequence --> , id Arg_sequence | ε
+,
+fun
+PRODUCTION RULE Arg_sequence --> , id Arg_sequence | ε
+,
+never
+PRODUCTION RULE Arg_sequence --> , id Arg_sequence | ε
+--> ε
+)
+PRODUCTION RULE BlockStatements --> { Total_Statement }
+{
+PRODUCTION RULE Total_Statement --> Statement Repeat_r | ε
+PRODUCTION RULE Statement --> IfStatement | WhileStatement | Expr ; | L | M | N | O | P
+PRODUCTION RULE Expr --> A B
+PRODUCTION RULE A --> D E
+PRODUCTION RULE D --> ( Expr ) | id | number
+--> 3
+PRODUCTION RULE E --> F D E | ε
+--> ε
+PRODUCTION RULE B --> C A B | ε
+PRODUCTION RULE C --> + | -
++
+PRODUCTION RULE A --> D E
+PRODUCTION RULE D --> ( Expr ) | id | number
+--> 2
+PRODUCTION RULE E --> F D E | ε
+--> ε
+PRODUCTION RULE B --> C A B | ε
+--> ε
+PRODUCTION RULE Repeat_r --> Statement Repeat_r | ε
+PRODUCTION RULE Statement --> IfStatement | WhileStatement | Expr ; | L | M | N | O | P
+PRODUCTION RULE Expr --> A B
+PRODUCTION RULE A --> D E
+PRODUCTION RULE D --> ( Expr ) | id | number
+--> <
+PRODUCTION RULE E --> F D E | ε
+--> ε
+PRODUCTION RULE B --> C A B | ε
+--> ε
+PRODUCTION RULE Repeat_r --> Statement Repeat_r | ε
+PRODUCTION RULE Statement --> IfStatement | WhileStatement | Expr ; | L | M | N | O | P
+PRODUCTION RULE Expr --> A B
+PRODUCTION RULE A --> D E
+PRODUCTION RULE D --> ( Expr ) | id | number
+--> 5
+PRODUCTION RULE E --> F D E | ε
+PRODUCTION RULE F --> * | / | % | power
+*
+PRODUCTION RULE D --> ( Expr ) | id | number
+--> 4
+PRODUCTION RULE E --> F D E | ε
+--> ε
+PRODUCTION RULE B --> C A B | ε
+--> ε
+PRODUCTION RULE Repeat_r --> Statement Repeat_r | ε
+PRODUCTION RULE Statement --> IfStatement | WhileStatement | Expr ; | L | M | N | O | P
+PRODUCTION RULE Expr --> A B
+PRODUCTION RULE A --> D E
+PRODUCTION RULE D --> ( Expr ) | id | number
+--> +(
+PRODUCTION RULE E --> F D E | ε
+--> ε
+PRODUCTION RULE B --> C A B | ε
+--> ε
+PRODUCTION RULE Repeat_r --> Statement Repeat_r | ε
+PRODUCTION RULE Statement --> IfStatement | WhileStatement | Expr ; | L | M | N | O | P
+PRODUCTION RULE Expr --> A B
+PRODUCTION RULE A --> D E
+PRODUCTION RULE D --> ( Expr ) | id | number
+--> 9
+PRODUCTION RULE E --> F D E | ε
+PRODUCTION RULE F --> * | / | % | power
+/
+PRODUCTION RULE D --> ( Expr ) | id | number
+--> 9
+PRODUCTION RULE E --> F D E | ε
+--> ε
+PRODUCTION RULE B --> C A B | ε
+--> ε
+PRODUCTION RULE Repeat_r --> Statement Repeat_r | ε
+PRODUCTION RULE Statement --> IfStatement | WhileStatement | Expr ; | L | M | N | O | P
+PRODUCTION RULE Expr --> A B
+PRODUCTION RULE A --> D E
+PRODUCTION RULE D --> ( Expr ) | id | number
+--> )%
+PRODUCTION RULE E --> F D E | ε
+--> ε
+PRODUCTION RULE B --> C A B | ε
+--> ε
+PRODUCTION RULE Repeat_r --> Statement Repeat_r | ε
+PRODUCTION RULE Statement --> IfStatement | WhileStatement | Expr ; | L | M | N | O | P
+PRODUCTION RULE Expr --> A B
+PRODUCTION RULE A --> D E
+PRODUCTION RULE D --> ( Expr ) | id | number
+--> 10
+PRODUCTION RULE E --> F D E | ε
+--> ε
+PRODUCTION RULE B --> C A B | ε
+--> ε
+PRODUCTION RULE Repeat_r --> Statement Repeat_r | ε
+PRODUCTION RULE Statement --> IfStatement | WhileStatement | Expr ; | L | M | N | O | P
+PRODUCTION RULE Expr --> A B
+PRODUCTION RULE A --> D E
+PRODUCTION RULE D --> ( Expr ) | id | number
+--> }
+PRODUCTION RULE E --> F D E | ε
+--> ε
+PRODUCTION RULE B --> C A B | ε
+--> ε
+PRODUCTION RULE Repeat_r --> Statement Repeat_r | ε
+--> ε
+PRODUCTION RULE Generate_rec   --> FuncDef Generate_rec | ε
+--> ε
+Parsing complete
+The total amount of parse_tok parsed is...24
